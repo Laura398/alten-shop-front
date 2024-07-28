@@ -4,7 +4,7 @@ import { ProductsComponent } from './product/products/products.component';
 import { ProductsAdminComponent } from './product/products-admin/products-admin.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/products', pathMatch: 'full'},
+  // {path: '', redirectTo: '/products', pathMatch: 'full'},
   {path: 'products', component: ProductsComponent},
   {path: 'admin/products', component: ProductsAdminComponent}
 ];

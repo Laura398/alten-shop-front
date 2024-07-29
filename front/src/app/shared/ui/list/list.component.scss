@@ -1,10 +1,11 @@
 :host ::ng-deep {
   .p-dataview {
-    height: 100%;
-
     .p-dataview-header {
       .form-control-container {
+        height: 80px;
+        width: 100%;
         display: flex;
+        align-items: center;
         justify-content: space-between;
 
         .h-45 {
@@ -27,6 +28,15 @@
         .p-dataview-layout-options {
           display: inline-flex;
           height: 45px;
+        }
+
+        @media screen and (max-width: 769px) {
+          flex-direction: column;
+          height: auto;
+
+          .p-element {
+            margin: 0 !important;
+          }
         }
       }
     }
@@ -53,7 +63,7 @@
 
   .list-item-container {
     width: 100%;
-    height: 50px;
+    min-height: 100px;
 
     .list-item {
       display: flex;
@@ -67,6 +77,10 @@
       &:hover {
         background-color: var(--tertiary-bg-color);
       }
+
+      @media screen and (max-width: 769px) {
+        padding: 0;
+      }
     }
   }
 
@@ -75,7 +89,6 @@
 
     .grid-item {
       margin: 0.5em;
-      height: 200px;
       padding: 0.5rem;
       border-radius: 4px;
       margin-bottom: 2rem;
@@ -88,6 +101,14 @@
       &:hover {
         background-color: var(--tertiary-bg-color);
       }
+    }
+
+    @media screen and (max-width: 960px) {
+      width: 50%;
+    }
+
+    @media screen and (max-width: 769px) {
+      width: 100%;
     }
   }
 }

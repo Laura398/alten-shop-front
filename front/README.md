@@ -5,7 +5,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Json server
 
-
+Run `npm run server` to launch the Json server. It is available at endpoint `http://localhost:3008/data`.
 
 ## Code scaffolding
 

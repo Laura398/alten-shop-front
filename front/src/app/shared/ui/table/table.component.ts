@@ -66,7 +66,7 @@ export class TableComponent<T> implements OnChanges {
     this.lazyLoaded.emit(cleanEvent);
   }
 
-  public onEdit(rowData: T): void {
+  public onEdit(rowData: T): void {    
     this.editedEntry = {...rowData};
     this.creation = false;
     this.entryEditionDialogDisplayed = true;
@@ -92,7 +92,11 @@ export class TableComponent<T> implements OnChanges {
   }
 
   public onEditedEntrySave(editedEntry): void {
-    this.saved.emit(editedEntry);
+    const newEntry = {
+      ...this.editedEntry,
+      ...editedEntry
+    }
+    this.saved.emit(newEntry);
     this.editedEntry = null;
     this.entryEditionDialogDisplayed = false;
   }

@@ -1,1 +1,14 @@
-<p>products-admin works!</p>
+<div class="app-frame">
+    <app-table
+      [data]="products"
+      [config]="options"
+      [selectable]="true"
+      [allowAdd]="true"
+      [allowDelete]="true"
+      [allowEdit]="true"
+      [multiSelect]="true"
+      [entity]="product"
+      (saved)="saveProduct($event)"
+      (deleted)="removeProduct($event)"
+    ></app-table>
+  </div>

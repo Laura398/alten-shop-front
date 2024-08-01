@@ -1,5 +1,15 @@
 # Alten Shop Front-end
 
+## Description
+
+This Frontend application is made with Angular and uses a dockerised MongoDB database.
+
+## Installation
+
+```bash
+$ npm install
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

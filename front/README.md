@@ -3,9 +3,27 @@
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Backend API
+
+Backend API can be found here : `https://github.com/Laura398/alten-shop-back.git`. Install and run it following the backend repository README.md.
+Make sure in `src/app/product/product.service.ts` :
+- line 9 is commented
+- line 10 is not commented
+- line 11 is as follow :
+```typescript
+private isJsonServer: boolean = false;
+```
+
 ## Json server
 
-Run `npm run server` to launch the Json server. It is available at endpoint `http://localhost:3008/data`.
+If you want to use Json server instead of backend, run `npm run server` to launch the Json server. It is available at endpoint `http://localhost:3008/data`.
+In `src/app/product/product.service.ts` :
+- uncomment line 9
+- comment line 10
+- write this instead of line 11 :
+```typescript
+private isJsonServer: boolean = true;
+```
 
 ## Code scaffolding
 

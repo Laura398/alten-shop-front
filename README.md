@@ -17,7 +17,7 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 
 ## Backend API
 
-Backend API can be found here : `https://github.com/Laura398/alten-shop-back.git`. Install and run it following the backend repository README.md.
+Backend API can be found here : [`https://github.com/Laura398/alten-shop-back.git`](https://github.com/Laura398/alten-shop-back.git). Install and run it following the backend repository README.md.
 Make sure in `src/app/product/product.service.ts` :
 - line 9 is commented
 - line 10 is not commented

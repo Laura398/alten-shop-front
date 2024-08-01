@@ -7,6 +7,7 @@ This Frontend application is made with Angular and can be used either with its B
 ## Installation
 
 ```bash
+$ cd front
 $ npm install
 ```
 

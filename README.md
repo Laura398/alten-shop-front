@@ -2,7 +2,7 @@
 
 ## Description
 
-This Frontend application is made with Angular and uses a dockerised MongoDB database.
+This Frontend application is made with Angular and can be used either with its Backend API or with a Json server.
 
 ## Installation
 
@@ -12,7 +12,7 @@ $ npm install
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Backend API
 

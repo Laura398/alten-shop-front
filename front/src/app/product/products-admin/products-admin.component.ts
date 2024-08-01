@@ -49,24 +49,28 @@ export class ProductsAdminComponent implements OnInit {
   }
 
   saveProduct(product: Product): void {
-    console.log();
-
     if (product.id) {
-      this.productService
-        .updateProduct(product.id, product)
-        .then(() => {
-          this.getAllProducts();
-        });
+      this.productService.updateProduct(product).then(() => {
+        this.getAllProducts();
+      });
     } else {
-      this.productService
-        .createProduct(product)
-        .then(() => {
-          this.getAllProducts();
-        });
+      if (!product.inventoryStatus)
+        product.inventoryStatus = InventoryStatus.INSTOCK;
+      if (!product.category) product.category = Category.ACCESSORIES;
+      if (!product.quantity) product.quantity = 0;
+      if (!product.code) return alert("Product code is required");
+      if (!product.name) return alert("Product name is required");
+      if (!product.description) return alert("Product description is required");
+      if (!product.price) return alert("Product price is required");
+      if (!product.image) delete product.image;
+      if (!product.rating) delete product.rating;
+      this.productService.createProduct(product).then(() => {
+        this.getAllProducts();
+      });
     }
   }
 
-  removeProduct(ids: number[]): void {    
+  removeProduct(ids: number[]): void {
     this.productService.deleteManyProducts(ids).then(() => {
       this.getAllProducts();
     });
